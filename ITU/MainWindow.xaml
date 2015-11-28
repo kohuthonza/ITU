@@ -28,7 +28,7 @@
         <Label Grid.Row="1" Grid.Column="0" Margin="10" HorizontalAlignment="Right" Content="_Heslo" Target="{Binding ElementName=passwdBox}" />
         <PasswordBox Grid.Row="1" Grid.Column="1" Margin="10" Name="passwdBox" />
 
-        <Button Grid.Row="3" Grid.Column="1" Margin="10" Name="loginBtn" Click="loginBtn_Click">Přihlásit se</Button>
+        <Button Grid.Row="3" Grid.Column="1" Margin="10" Name="loginBtn" IsDefault="True" Click="loginBtn_Click">Přihlásit se</Button>
         <Button Grid.Row="4" Grid.Column="1" Margin="10" Name="addUserBtn" Click="addUserBtn_Click">Přidat uživatele</Button>
 
 

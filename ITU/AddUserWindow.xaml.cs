@@ -37,7 +37,11 @@ namespace ITU
                 }
                 catch (InvalidOperationException)
                 {
-                    Users.users.Add(new User(loginBox.Text, passwdBox.Password));
+                    User tmp = new User();
+                    tmp.Name = loginBox.Text;
+                    tmp.passwd = passwdBox.Password;
+                    Users.users.Add(tmp);
+                
                     MessageBox.Show("Uživatel přidán!");
                     open_MainWindow();
                     this.Close();
@@ -64,5 +68,6 @@ namespace ITU
             MainWindow wnd = new MainWindow();
             wnd.Show();
         }
+
     }
 }

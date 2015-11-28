@@ -24,11 +24,6 @@ namespace ITU
 
         public string passwd { get; set; }
 
-        public User(string name, string passwd)
-        {
-            this.name = name;
-            this.passwd = passwd;
-        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

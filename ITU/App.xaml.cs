@@ -20,12 +20,15 @@ namespace ITU
         {
 
             Users.Initialize();
-
-            Users.users.Add(new User("Honza", "kolomaz"));
-            Users.users.Add(new User("Jurka", "volomaz"));
+            Users.deserialize();
 
             MainWindow wnd = new MainWindow();
             wnd.Show();
+        }
+
+        private void Application_Exit(object sender, ExitEventArgs e)
+        {
+            Users.serialize();
         }
     }
 }
