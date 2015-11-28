@@ -1,0 +1,54 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ITU
+{
+    public class User : INotifyPropertyChanged
+    {
+
+
+        private string name;
+
+        public string Name
+        {
+            get { return this.name; }
+            set {
+                    this.name = value;
+                    this.NotifyPropertyChanged("name");
+                }
+        }
+
+        public string passwd { get; set; }
+
+        public User(string name, string passwd)
+        {
+            this.name = name;
+            this.passwd = passwd;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void NotifyPropertyChanged(string propName)
+        {
+            if (this.PropertyChanged != null)
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
+        }
+
+        public override bool Equals(object obj)
+        {
+            User user = obj as User;
+            if (obj == null)
+            {
+                return false;
+            }
+            return Name == user.Name && passwd == user.passwd;
+
+          
+        }
+
+    }
+}
