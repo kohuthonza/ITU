@@ -43,7 +43,9 @@ namespace ITU
                     Users.users.Add(tmp);
                 
                     MessageBox.Show("Uživatel přidán!");
-                    open_MainWindow();
+
+                    ProfileWindow wnd = new ProfileWindow(tmp);
+                    wnd.Show();
                     this.Close();
 
                 }
@@ -54,7 +56,8 @@ namespace ITU
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
         {
-            open_MainWindow();
+            WelcomeWindow wnd = new WelcomeWindow();
+            wnd.Show();
             this.Close();
         }
 
@@ -63,11 +66,7 @@ namespace ITU
             this.Close();
         }
 
-        private void open_MainWindow()
-        {
-            MainWindow wnd = new MainWindow();
-            wnd.Show();
-        }
+        
 
     }
 }

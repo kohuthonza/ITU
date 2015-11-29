@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\kohut\Documents\Visual Studio 2015\Projects\ITU\ITU\App.xaml
-3376756190
+7-1561876604
 
-91620786709
+13700993087
 13738642453
-AddUserWindow.xaml;MainWindow.xaml;ProfileWindow.xaml;
+AccountsWindow.xaml;AddUserWindow.xaml;EditUserWindow.xaml;MainWindow.xaml;PasswordWindow.xaml;ProfileWindow.xaml;WelcomeWindow.xaml;
 
 False
 

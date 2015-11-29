@@ -16,3 +16,11 @@ c:\users\kohut\documents\visual studio 2015\Projects\ITU\ITU\obj\Debug\ProfileWi
 c:\users\kohut\documents\visual studio 2015\Projects\ITU\ITU\obj\Debug\ProfileWindow.baml
 c:\users\kohut\documents\visual studio 2015\Projects\ITU\ITU\obj\Debug\AddUserWindow.g.cs
 c:\users\kohut\documents\visual studio 2015\Projects\ITU\ITU\obj\Debug\AddUserWindow.baml
+C:\Users\kohut\Documents\Visual Studio 2015\Projects\ITU\ITU\obj\Debug\AccountsWindow.g.cs
+C:\Users\kohut\Documents\Visual Studio 2015\Projects\ITU\ITU\obj\Debug\AccountsWindow.baml
+C:\Users\kohut\Documents\Visual Studio 2015\Projects\ITU\ITU\obj\Debug\PasswordWindow.g.cs
+C:\Users\kohut\Documents\Visual Studio 2015\Projects\ITU\ITU\obj\Debug\PasswordWindow.baml
+C:\Users\kohut\Documents\Visual Studio 2015\Projects\ITU\ITU\obj\Debug\WelcomeWindow.g.cs
+C:\Users\kohut\Documents\Visual Studio 2015\Projects\ITU\ITU\obj\Debug\WelcomeWindow.baml
+C:\Users\kohut\Documents\Visual Studio 2015\Projects\ITU\ITU\obj\Debug\EditUserWindow.g.cs
+C:\Users\kohut\Documents\Visual Studio 2015\Projects\ITU\ITU\obj\Debug\EditUserWindow.baml

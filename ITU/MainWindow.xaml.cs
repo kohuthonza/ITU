@@ -30,7 +30,7 @@ namespace ITU
         }
 
        
-
+        /*
         private void loginBtn_Click(object sender, RoutedEventArgs e)
         {
 
@@ -57,13 +57,34 @@ namespace ITU
             }
          
         }
-
+        */
+        /*
         private void addUserBtn_Click(object sender, RoutedEventArgs e)
         {
             AddUserWindow wnd = new AddUserWindow();
             wnd.Show();
             this.Close();
         }
+        */
+        private void startBtn_Click(object sender, RoutedEventArgs e)
+        {
+            WelcomeWindow wnd = new WelcomeWindow();
+            wnd.Show();
+            this.Close();
+        }
 
+        private void accBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AccountsWindow wnd = new AccountsWindow();
+            wnd.Show();
+            this.Close();
+        }
+
+        private void endBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        
     }
 }

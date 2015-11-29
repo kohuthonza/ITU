@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,35 +15,27 @@ using System.Windows.Shapes;
 namespace ITU
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for WelcomeWindow.xaml
     /// </summary>
-    public partial class ProfileWindow : Window
+    public partial class WelcomeWindow : Window
     {
-        private User user;
-
-        public ProfileWindow(User user)
+        public WelcomeWindow()
         {
             InitializeComponent();
-            this.user = user;
         }
 
-        private void logoutBtn_Click(object sender, RoutedEventArgs e)
+        private void backBtn_Click(object sender, RoutedEventArgs e)
         {
             MainWindow wnd = new MainWindow();
             wnd.Show();
             this.Close();
         }
 
-        private void endBtn_Click(object sender, RoutedEventArgs e)
+        private void nextBtn_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
-        }
-
-        private void editBtn_Click(object sender, RoutedEventArgs e)
-        {
-            EditUserWindow wnd = new EditUserWindow(user, this);
+            AddUserWindow wnd = new AddUserWindow();
             wnd.Show();
-       
+            this.Close();
         }
     }
 }

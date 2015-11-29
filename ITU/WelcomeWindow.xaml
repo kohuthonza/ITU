@@ -1,4 +1,4 @@
-﻿<Window x:Class="ITU.ProfileWindow"
+﻿<Window x:Class="ITU.WelcomeWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,13 +8,13 @@
         MinWidth="550"
         MinHeight="350"
         WindowStartupLocation="CenterScreen"
-        Title="Profil" Height="350" Width="550">
+        Title="Výtejte" Height="350" Width="550">
     <Grid Name="main_grid" Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="9*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="Epický menu, testy, hry, databáze atd."/>
+        <TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" Text="Epický úvod do naší aplikace"/>
         <Grid Grid.Row="1" Margin="10,0,10,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -23,11 +23,9 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Row="3" Grid.Column="2" Name="editBtn" Click="editBtn_Click">Účet</Button>
-            <Button Grid.Row="4" Grid.Column="0" Name="logoutBtn" Click="logoutBtn_Click">Odhlásit se</Button>
-            <Button Grid.Row="4" Grid.Column="4" Name="endBtn" Click="endBtn_Click">Ukončit</Button>
+            <Button Grid.Row="4" Grid.Column="0" Name="backBtn" Click="backBtn_Click">Zpět</Button>
+            <Button Grid.Row="4" Grid.Column="4" Name="nextBtn" IsDefault="True" Click="nextBtn_Click">Pokračovat</Button>
         </Grid>
-
+        
     </Grid>
-    
 </Window>

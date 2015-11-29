@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <User>
-    <Name>loginBox</Name>
-    <passwd>kolomaz</passwd>
-  </User>
-  <User>
-    <Name>loginBox</Name>
+    <Name>pronza</Name>
     <passwd>kolomaz</passwd>
   </User>
   <User>
     <Name>Honza</Name>
-    <passwd>kolomaz</passwd>
+    <passwd>komza</passwd>
   </User>
   <User>
-    <Name>Jurka</Name>
-    <passwd>kurka</passwd>
+    <Name>Paulie</Name>
+    <passwd>jurka</passwd>
   </User>
 </ArrayOfUser>

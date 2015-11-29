@@ -44,6 +44,10 @@ namespace ITU
 
           
         }
+        public override int GetHashCode()
+        {
+            return name.GetHashCode();
+        }
 
     }
 }

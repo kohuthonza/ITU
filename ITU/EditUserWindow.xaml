@@ -1,0 +1,48 @@
+﻿<Window x:Class="ITU.EditUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ITU"
+        mc:Ignorable="d"
+        MinWidth="550"
+        MinHeight="350"
+        WindowStartupLocation="CenterScreen"
+        Closing="Window_Closing"
+        Title="Účet" Height="350" Width="550">
+    <Grid Name="main_grid" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Margin="10"  HorizontalAlignment="Right" Content="_Přihlašovací jméno" Target="{Binding ElementName=loginBox}" />
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="10" Name="loginBox" />
+        <Label Grid.Row="2" Grid.Column="0" Margin="10" HorizontalAlignment="Right" Content="_Nové heslo" Target="{Binding ElementName=newpasswdBox}" />
+        <PasswordBox Grid.Row="2" Grid.Column="1" Margin="10" Name="newpasswdBox" />
+        <Label Grid.Row="3" Grid.Column="0" Margin="10" HorizontalAlignment="Right" Content="_Nové heslo znovu" Target="{Binding ElementName=new2passwdBox}" />
+        <PasswordBox Grid.Row="3" Grid.Column="1" Margin="10" Name="new2passwdBox" />
+
+        <Grid Grid.Row="5" Margin="10,0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Name="backBtn" Click="backBtn_Click">Zpět</Button>
+            <Button Grid.Column="2" Name="editBtn" IsDefault="True" Click="editBtn_Click">Upravit</Button>
+            <Button Grid.Column="4" Name="delBtn" Click="delBtn_Click">Odstranit</Button>
+        </Grid>
+
+    </Grid>
+</Window>
