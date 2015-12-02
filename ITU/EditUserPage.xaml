@@ -1,15 +1,13 @@
-﻿<Window x:Class="ITU.EditUserWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ITU"
-        mc:Ignorable="d"
-        MinWidth="550"
-        MinHeight="350"
-        WindowStartupLocation="CenterScreen"
-        Closing="Window_Closing"
-        Title="Účet" Height="350" Width="550">
+﻿<Page x:Class="ITU.EditUserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ITU"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="550"
+      Title="Účet">
+
     <Grid Name="main_grid" Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="1.5*" />
@@ -45,4 +43,4 @@
         </Grid>
 
     </Grid>
-</Window>
+</Page>

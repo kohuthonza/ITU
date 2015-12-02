@@ -35,11 +35,12 @@ namespace ITU
 
         public override bool Equals(object obj)
         {
-            User user = obj as User;
+            
             if (obj == null)
             {
                 return false;
             }
+            User user = obj as User;
             return Name == user.Name && passwd == user.passwd;
 
           

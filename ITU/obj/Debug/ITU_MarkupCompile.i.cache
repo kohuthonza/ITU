@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\kohut\Documents\Visual Studio 2015\Projects\ITU\ITU\obj\Debug\
+C:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\obj\Debug\
 ITU
 none
 false
 DEBUG;TRACE
-C:\Users\kohut\Documents\Visual Studio 2015\Projects\ITU\ITU\App.xaml
-7-1561876604
+C:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\App.xaml
+8-1161983801
 
-17-1349454504
+18-770744828
 13738642453
-AccountsWindow.xaml;AddUserWindow.xaml;EditUserWindow.xaml;MainWindow.xaml;PasswordWindow.xaml;ProfileWindow.xaml;WelcomeWindow.xaml;
+AccountsPage.xaml;AddUserPage.xaml;EditUserPage.xaml;MainPage.xaml;MainWindow.xaml;PasswordWindow.xaml;ProfilePage.xaml;WelcomePage.xaml;
 
 True
 

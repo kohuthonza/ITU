@@ -10,26 +10,31 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ITU
 {
     /// <summary>
-    /// Interaction logic for AccountsWindow.xaml
+    /// Interaction logic for AccountsPage.xaml
     /// </summary>
-    public partial class AccountsWindow : Window
+    public partial class AccountsPage : Page
     {
-        public AccountsWindow()
+        public AccountsPage()
         {
             InitializeComponent();
             accList.ItemsSource = Users.users;
             accList.DisplayMemberPath = "Name";
         }
 
+        private void backBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.GoBack();
+        }
+
         private void loginBtn_Click(object sender, RoutedEventArgs e)
         {
-
-            if(accList.SelectedItem == null)
+            if (accList.SelectedItem == null)
             {
                 MessageBox.Show("Vyberte účet!");
             }
@@ -42,28 +47,18 @@ namespace ITU
                 if (wnd.success)
                 {
                     wnd.Close();
-                    ProfileWindow pwnd = new ProfileWindow(tmp);
-                    pwnd.Show();
-                    this.Close();
+                    this.NavigationService.Navigate(new ProfilePage(tmp));
                 }
                 else
                 {
                     wnd.Close();
                 }
             }
-                
         }
 
         private void endBtn_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
-        }
-
-        private void backBtn_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow wnd = new MainWindow();
-            wnd.Show();
-            this.Close();
+            Application.Current.MainWindow.Close();
         }
     }
 }

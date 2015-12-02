@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ITU
 {
     /// <summary>
-    /// Interaction logic for AddUserWindow.xaml
+    /// Interaction logic for AddUserPage.xaml
     /// </summary>
-    public partial class AddUserWindow : Window
+    public partial class AddUserPage : Page
     {
-        public AddUserWindow()
+        public AddUserPage()
         {
             InitializeComponent();
         }
@@ -28,8 +29,6 @@ namespace ITU
         {
             if (loginBox.Text != "" && passwdBox.Password != "")
             {
-               
-
                 try
                 {
                     Users.users.First(var => (var.Name == loginBox.Text));
@@ -41,32 +40,25 @@ namespace ITU
                     tmp.Name = loginBox.Text;
                     tmp.passwd = passwdBox.Password;
                     Users.users.Add(tmp);
-                
+
                     MessageBox.Show("Uživatel přidán!");
 
-                    ProfileWindow wnd = new ProfileWindow(tmp);
-                    wnd.Show();
-                    this.Close();
+                    this.NavigationService.Navigate(new ProfilePage(tmp));
+
 
                 }
 
             }
-                
         }
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
         {
-            WelcomeWindow wnd = new WelcomeWindow();
-            wnd.Show();
-            this.Close();
+            this.NavigationService.GoBack();
         }
 
         private void endBtn_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Application.Current.MainWindow.Close();
         }
-
-        
-
     }
 }

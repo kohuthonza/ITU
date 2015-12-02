@@ -21,70 +21,10 @@ namespace ITU
     /// </summary>
     public partial class MainWindow : Window
     {
-     
-
         public MainWindow()
         {
             InitializeComponent();
-
+            _mainFrame.Navigate(new MainPage());
         }
-
-       
-        /*
-        private void loginBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-
-
-            if (loginBox.Text != "" && passwdBox.Password != "")
-
-             
-
-            {
-                try
-                {
-                    
-                    ProfileWindow wnd = new ProfileWindow(Users.users.First(var => (var.Name == loginBox.Text) && (var.passwd == passwdBox.Password)));
-                    wnd.Show();
-                    this.Close();
-                    
-                }
-                catch (InvalidOperationException)
-                {
-                    MessageBox.Show("Neznám tě!");
-                }
-   
-            }
-         
-        }
-        */
-        /*
-        private void addUserBtn_Click(object sender, RoutedEventArgs e)
-        {
-            AddUserWindow wnd = new AddUserWindow();
-            wnd.Show();
-            this.Close();
-        }
-        */
-        private void startBtn_Click(object sender, RoutedEventArgs e)
-        {
-            WelcomeWindow wnd = new WelcomeWindow();
-            wnd.Show();
-            this.Close();
-        }
-
-        private void accBtn_Click(object sender, RoutedEventArgs e)
-        {
-            AccountsWindow wnd = new AccountsWindow();
-            wnd.Show();
-            this.Close();
-        }
-
-        private void endBtn_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
-
-        
     }
 }

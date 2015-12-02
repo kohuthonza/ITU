@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,40 +10,41 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ITU
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for ProfilePage.xaml
     /// </summary>
-    public partial class ProfileWindow : Window
+    public partial class ProfilePage : Page
     {
         private User user;
 
-        public ProfileWindow(User user)
+        public ProfilePage(User user)
         {
-            InitializeComponent();
             this.user = user;
-        }
-
-        private void logoutBtn_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow wnd = new MainWindow();
-            wnd.Show();
-            this.Close();
-        }
-
-        private void endBtn_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
+            InitializeComponent();
         }
 
         private void editBtn_Click(object sender, RoutedEventArgs e)
         {
-            EditUserWindow wnd = new EditUserWindow(user, this);
+            this.NavigationService.Navigate(new EditUserPage(user));
+        }
+
+        private void logoutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            
+            MainWindow wnd = new MainWindow();
             wnd.Show();
-       
+            Application.Current.MainWindow.Close();
+
+        }
+
+        private void endBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.Close();
         }
     }
 }

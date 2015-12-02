@@ -10,32 +10,29 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ITU
 {
     /// <summary>
-    /// Interaction logic for WelcomeWindow.xaml
+    /// Interaction logic for WelcomePage.xaml
     /// </summary>
-    public partial class WelcomeWindow : Window
+    public partial class WelcomePage : Page
     {
-        public WelcomeWindow()
+        public WelcomePage()
         {
             InitializeComponent();
         }
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow wnd = new MainWindow();
-            wnd.Show();
-            this.Close();
+            this.NavigationService.GoBack();
         }
 
         private void nextBtn_Click(object sender, RoutedEventArgs e)
         {
-            AddUserWindow wnd = new AddUserWindow();
-            wnd.Show();
-            this.Close();
+            this.NavigationService.Navigate(new AddUserPage());
         }
     }
 }

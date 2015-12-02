@@ -10,42 +10,31 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ITU
 {
     /// <summary>
-    /// Interaction logic for EditUserWindow.xaml
+    /// Interaction logic for EditUserPage.xaml
     /// </summary>
-    public partial class EditUserWindow : Window
+    public partial class EditUserPage : Page
     {
-        private ProfileWindow prownd;
         private User user;
-        
 
-        public EditUserWindow(User user, ProfileWindow prownd)
+        public EditUserPage(User user)
         {
             InitializeComponent();
-
-            this.prownd = prownd;
             this.user = user;
-            prownd.Hide();
-
-            loginBox.Text = user.Name;
-
-
         }
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
         {
-            prownd.Show();
-            this.Close();
+            this.NavigationService.GoBack();
         }
 
         private void editBtn_Click(object sender, RoutedEventArgs e)
         {
-
-            
             PasswordWindow wnd = new PasswordWindow(user);
             wnd.ShowDialog();
             if (wnd.success)
@@ -72,7 +61,7 @@ namespace ITU
                         }
                     }
                 }
-            
+
                 if (!(string.IsNullOrWhiteSpace(newpasswdBox.Password) && string.IsNullOrWhiteSpace(new2passwdBox.Password)))
                 {
                     if (newpasswdBox.Password == new2passwdBox.Password)
@@ -93,9 +82,6 @@ namespace ITU
             loginBox.Text = user.Name;
             newpasswdBox.Password = "";
             new2passwdBox.Password = "";
-
-            
-
         }
 
         private void delBtn_Click(object sender, RoutedEventArgs e)
@@ -108,19 +94,13 @@ namespace ITU
                 Users.users.Remove(user);
                 MainWindow mwnd = new MainWindow();
                 mwnd.Show();
-                prownd.Close();
-                this.Close();
+                Application.Current.MainWindow.Close();
+                
             }
             else
             {
                 wnd.Close();
             }
-
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            prownd.Show(); ;
         }
     }
 }
