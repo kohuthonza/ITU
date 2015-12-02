@@ -12,5 +12,5 @@
     <DockPanel>
         <Frame x:Name="_mainFrame" NavigationUIVisibility="Hidden" />
     </DockPanel>
-  
+       
 </Window>

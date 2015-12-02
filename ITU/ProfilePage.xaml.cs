@@ -35,16 +35,18 @@ namespace ITU
 
         private void logoutBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+ 
             MainWindow wnd = new MainWindow();
             wnd.Show();
             Application.Current.MainWindow.Close();
+            Application.Current.MainWindow = wnd;
 
         }
 
         private void endBtn_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.MainWindow.Close();
+            if (Application.Current.MainWindow != null)
+                Application.Current.MainWindow.Close();
         }
     }
 }

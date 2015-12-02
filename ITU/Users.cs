@@ -12,11 +12,11 @@ namespace ITU
 {
     static class Users
     {
-        static public ObservableCollection<User> users { get; set; }
+        static public List<User> users { get; set; }
 
         static public void Initialize()
         {
-            users = new ObservableCollection<User>();
+            users = new List<User>();
         }
 
         static public void serialize()
@@ -47,7 +47,7 @@ namespace ITU
                     XmlSerializer serializer = new XmlSerializer(users.GetType());
                     using (StreamReader sr = new StreamReader("users.xml"))
                     {
-                        users = (ObservableCollection<User>)serializer.Deserialize(sr);
+                        users = (List<User>)serializer.Deserialize(sr);
                     }
                 }
             }

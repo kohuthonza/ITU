@@ -17,7 +17,7 @@ namespace ITU
     /// <summary>
     /// Interaction logic for PasswordWindow.xaml
     /// </summary>
-    public partial class PasswordWindow : Window
+    public partial class PasswordWindow : System.Windows.Window
     {
 
         private User user;

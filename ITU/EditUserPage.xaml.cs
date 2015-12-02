@@ -26,6 +26,7 @@ namespace ITU
         {
             InitializeComponent();
             this.user = user;
+            loginBox.Text = user.Name;
         }
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
@@ -91,10 +92,12 @@ namespace ITU
             if (wnd.success)
             {
                 wnd.Close();
+
                 Users.users.Remove(user);
                 MainWindow mwnd = new MainWindow();
                 mwnd.Show();
                 Application.Current.MainWindow.Close();
+                Application.Current.MainWindow = mwnd;
                 
             }
             else
