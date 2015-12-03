@@ -24,7 +24,7 @@ namespace ITU
         {
             InitializeComponent();
             accList.ItemsSource = Users.users;
-            accList.DisplayMemberPath = "Name";
+            accList.DisplayMemberPath = "Login";
         }
 
         private void backBtn_Click(object sender, RoutedEventArgs e)
@@ -41,7 +41,7 @@ namespace ITU
             else
             {
                 User tmp = accList.SelectedItem as User;
-                PasswordWindow wnd = new PasswordWindow(tmp);
+                PasswordWindow wnd = new PasswordWindow(tmp, "Zadejte heslo");
                 wnd.ShowDialog();
 
                 if (wnd.success)

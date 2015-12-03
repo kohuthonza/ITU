@@ -30,7 +30,15 @@ namespace ITU
 
         private void editBtn_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new EditUserPage(user));
+            if (this.NavigationService.CanGoForward)
+            {
+                this.NavigationService.GoForward();
+            }
+            else
+            {
+                this.NavigationService.Navigate(new EditUserPage(user));
+            }
+  
         }
 
         private void logoutBtn_Click(object sender, RoutedEventArgs e)

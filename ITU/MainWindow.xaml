@@ -7,10 +7,13 @@
         mc:Ignorable="d"
         MinWidth="550"
         MinHeight="350"
-        WindowStartupLocation="CenterScreen"
-        Title="Květinátor" Height="350" Width="550">
+        WindowStyle="None" ResizeMode="NoResize"  
+        WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        Title="Květinátor" Height="500" Width="850">
+ 
     <DockPanel>
         <Frame x:Name="_mainFrame" NavigationUIVisibility="Hidden" />
+        
     </DockPanel>
        
 </Window>

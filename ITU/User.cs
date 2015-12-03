@@ -7,31 +7,20 @@ using System.Threading.Tasks;
 
 namespace ITU
 {
-    public class User : INotifyPropertyChanged
+    public class User
     {
 
 
-        private string name;
 
-        public string Name
-        {
-            get { return this.name; }
-            set {
-                    this.name = value;
-                    this.NotifyPropertyChanged("name");
-                }
-        }
-
-        public string passwd { get; set; }
+        public string Login { get; set; }
+        public string Passwd { get; set; }
+        public string Name { get; set; }
+        public string Sname { get; set; }
+        public string Email { get; set; }
 
 
-        public event PropertyChangedEventHandler PropertyChanged;
 
-        public void NotifyPropertyChanged(string propName)
-        {
-            if (this.PropertyChanged != null)
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propName));
-        }
+
 
         public override bool Equals(object obj)
         {
@@ -41,13 +30,13 @@ namespace ITU
                 return false;
             }
             User user = obj as User;
-            return Name == user.Name && passwd == user.passwd;
+            return Login == user.Login && Passwd == user.Passwd;
 
           
         }
         public override int GetHashCode()
         {
-            return name.GetHashCode();
+            return Login.GetHashCode();
         }
 
     }

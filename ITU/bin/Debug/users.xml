@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfUser xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <User>
-    <Name>honza</Name>
-    <passwd>honza</passwd>
-  </User>
-  <User>
-    <Name>trol</Name>
-    <passwd>trol</passwd>
+    <Login>lolec</Login>
+    <Passwd>lolec</Passwd>
+    <Name>taky</Name>
+    <Sname>lolec</Sname>
+    <Email>lolec@trololo.lol</Email>
   </User>
 </ArrayOfUser>

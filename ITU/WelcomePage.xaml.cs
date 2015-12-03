@@ -32,7 +32,15 @@ namespace ITU
 
         private void nextBtn_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new AddUserPage());
+            if (this.NavigationService.CanGoForward)
+            {
+                this.NavigationService.GoForward();
+            }
+            else
+            {
+                this.NavigationService.Navigate(new AddUserPage());
+            }
+            
         }
     }
 }

@@ -23,17 +23,18 @@ namespace ITU
         private User user;
         public bool success { get; set; }
 
-        public PasswordWindow(User user)
+        public PasswordWindow(User user, string alert)
         {
             InitializeComponent();
             this.user = user;
+            alertBlock.Text = alert;
             this.success = false;
 
         }
 
         private void subBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (passwdBox.Password == user.passwd)
+            if (passwdBox.Password == user.Passwd)
             {
                 success = true;
                 this.Hide();
