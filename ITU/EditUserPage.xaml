@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ITU"
       mc:Ignorable="d" 
       d:DesignHeight="350" d:DesignWidth="550"
-      Title="Účet">
+      Title="Účet" WindowTitle="Účet">
 
     <Grid Name="main_grid" Margin="10">
         <Grid.RowDefinitions>
@@ -18,18 +18,22 @@
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="61*"/>
-            <ColumnDefinition Width="113*"/>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Margin="10"  HorizontalAlignment="Right" Content="_Přihlašovací jméno" Target="{Binding ElementName=loginBox}" />
-        <TextBox Grid.Row="0" Grid.Column="1" Margin="10" Name="loginBox" />
+        <TextBox Grid.Row="0" Grid.Column="1" Margin="10" Name="loginBox" BorderThickness="2"/>
+        <TextBlock Grid.Row="0" Grid.Column="2" Margin="10" Name="loginAlert" Foreground="Red"/>
         <Label Grid.Row="2" Grid.Column="0" Margin="10" HorizontalAlignment="Right" Content="_Nové heslo" Target="{Binding ElementName=newpasswdBox}" />
-        <PasswordBox Grid.Row="2" Grid.Column="1" Margin="10" Name="newpasswdBox" />
+        <PasswordBox Grid.Row="2" Grid.Column="1" Margin="10" Name="newpasswdBox" BorderThickness="2"/>
+        <TextBlock Grid.Row="2" Grid.Column="2" Margin="10" Name="newpasswordAlert" Foreground="Red"/>
         <Label Grid.Row="3" Grid.Column="0" Margin="10" HorizontalAlignment="Right" Content="_Nové heslo znovu" Target="{Binding ElementName=new2passwdBox}" />
-        <PasswordBox Grid.Row="3" Grid.Column="1" Margin="10" Name="new2passwdBox" />
+        <PasswordBox Grid.Row="3" Grid.Column="1" Margin="10" Name="new2passwdBox" BorderThickness="2" />
+        <TextBlock Grid.Row="3" Grid.Column="2" Margin="10" Name="new2passwordAlert" Foreground="Red"/>
 
-        <Grid Grid.Row="5" Margin="10,0" Grid.ColumnSpan="2">
+        <Grid Grid.Row="5" Margin="10,0" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
