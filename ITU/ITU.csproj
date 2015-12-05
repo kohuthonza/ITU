@@ -40,6 +40,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,17 +60,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AccountsPage.xaml.cs">
-      <DependentUpon>AccountsPage.xaml</DependentUpon>
+    <Compile Include="Admin\AdminUserControl.xaml.cs">
+      <DependentUpon>AdminUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddUserPage.xaml.cs">
-      <DependentUpon>AddUserPage.xaml</DependentUpon>
+    <Compile Include="Plants\EditPlantUserControl.xaml.cs">
+      <DependentUpon>EditPlantUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EditUserPage.xaml.cs">
-      <DependentUpon>EditUserPage.xaml</DependentUpon>
+    <Compile Include="Plants\AddPlantUserControl.xaml.cs">
+      <DependentUpon>AddPlantUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="Plants\Plant.cs" />
+    <Compile Include="Plants\Plants.cs" />
+    <Compile Include="Plants\ShowPlantUserControl.xaml.cs">
+      <DependentUpon>ShowPlantUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Users\AccountsUserControl.xaml.cs">
+      <DependentUpon>AccountsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewStart\AddUserUserControl.xaml.cs">
+      <DependentUpon>AddUserUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Users\EditUserUserControl.xaml.cs">
+      <DependentUpon>EditUserUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Plants\PlantsUserControl.xaml.cs">
+      <DependentUpon>PlantsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainUserControl.xaml.cs">
+      <DependentUpon>MainUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -77,26 +95,48 @@
     <Compile Include="PasswordWindow.xaml.cs">
       <DependentUpon>PasswordWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProfilePage.xaml.cs">
-      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    <Compile Include="Users\ChangePasswdUserControl.xaml.cs">
+      <DependentUpon>ChangePasswdUserControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Users.cs" />
-    <Compile Include="WelcomePage.xaml.cs">
-      <DependentUpon>WelcomePage.xaml</DependentUpon>
+    <Compile Include="Users\ProfileUserControl.xaml.cs">
+      <DependentUpon>ProfileUserControl.xaml</DependentUpon>
     </Compile>
-    <Page Include="AccountsPage.xaml">
+    <Compile Include="Users\Users.cs" />
+    <Compile Include="NewStart\WelcomeUserControl.xaml.cs">
+      <DependentUpon>WelcomeUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UsersListUserControl.xaml.cs">
+      <DependentUpon>UsersListUserControl.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Admin\AdminUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddUserPage.xaml">
+    <Page Include="Plants\EditPlantUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EditUserPage.xaml">
+    <Page Include="Plants\AddPlantUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainPage.xaml">
+    <Page Include="Plants\ShowPlantUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Users\AccountsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewStart\AddUserUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Users\EditUserUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Plants\PlantsUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -104,7 +144,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="User.cs" />
+    <Compile Include="Users\User.cs" />
+    <Page Include="MainUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -113,11 +157,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ProfilePage.xaml">
+    <Page Include="Users\ChangePasswdUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WelcomePage.xaml">
+    <Page Include="Users\ProfileUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NewStart\WelcomeUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\UsersListUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -138,6 +190,7 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -151,6 +204,17 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="red-flower.ico" />
+    <Resource Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\MainWindow.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\addbutton.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

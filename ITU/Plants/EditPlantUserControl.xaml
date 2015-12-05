@@ -1,0 +1,117 @@
+﻿<UserControl x:Class="ITU.EditPlantUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ITU"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="850">
+    <UserControl.Resources>
+        <ImageBrush x:Key="ButtonImage" ImageSource="pack://application:,,,/Resources/addbutton.png"></ImageBrush>
+        <Style TargetType="{x:Type Button}" x:Key="image">
+            <Setter Property="Background" Value="{StaticResource ButtonImage}"/>
+            <Setter Property="BorderThickness" Value="2"></Setter>
+            <Setter Property="BorderBrush" Value="Transparent"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BorderThickness" Value="0"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Margin" Value="7"></Setter>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="BorderThickness" Value="2"></Setter>
+            <Setter Property="Margin" Value="7"></Setter>
+        </Style>
+        <Style TargetType="PasswordBox">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="BorderThickness" Value="2"></Setter>
+            <Setter Property="Margin" Value="7"></Setter>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Viewbox>
+        <Grid Name="main_grid" Margin="10" Width="850" Height="500">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1.5*" />
+                <RowDefinition Height="0.8*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="0.7*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1.5*"/>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Přidání rostliny" />
+
+            <Label Grid.Row="2" Grid.Column="0" Content="_Název" Target="{Binding ElementName=nameBox}" />
+            <TextBox Grid.Row="2" Grid.Column="1" Name="nameBox" />
+            <TextBlock Grid.Row="2" Grid.Column="2" Name="nameAlert" Foreground="Red"/>
+
+            <Label Grid.Row="3" Grid.Column="0" Content="_Podříše" Target="{Binding ElementName=podriseBox}" />
+            <TextBox Grid.Row="3" Grid.Column="1" Name="podriseBox" />
+
+            <Label Grid.Row="4" Grid.Column="0" Content="_Oddělení" Target="{Binding ElementName=oddeleniBox}" />
+            <TextBox Grid.Row="4" Grid.Column="1" Name="oddeleniBox" />
+
+            <Label Grid.Row="5" Grid.Column="0" Content="_Třída" Target="{Binding ElementName=tridaBox}" />
+            <TextBox Grid.Row="5" Grid.Column="1" Name="tridaBox" />
+
+            <Label Grid.Row="6" Grid.Column="0" Content="_Řád" Target="{Binding ElementName=radBox}" />
+            <TextBox Grid.Row="6" Grid.Column="1" Name="radBox" />
+
+            <Label Grid.Row="7" Grid.Column="0" Content="_Čeleď" Target="{Binding ElementName=celedBox}" />
+            <TextBox Grid.Row="7" Grid.Column="1" Name="celedBox" />
+
+            <TextBox Grid.Row="3" Grid.Column="2" Grid.RowSpan="5" GotFocus="descriptionBox_GotFocus" Name="descriptionBox" />
+            <TextBlock Grid.Row="2" Grid.Column="3" Name="imageAlert" HorizontalAlignment="Center"></TextBlock>
+
+            <Button Style="{StaticResource image}" Grid.Row="3" Grid.Column="3" Name="imageBtn" Grid.RowSpan="5" Margin="5.51" Click="imageBtn_Click"></Button>
+
+            <Grid Grid.Row="9" Margin="10,0" Grid.ColumnSpan="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="3" Grid.Column="0" Name="backBtn" Click="backBtn_Click">Zpět</Button>
+                <Button Grid.Row="4" Grid.Column="2" Name="addPlantBtn" Click="addPlantBtn_Click">Přidat rostlinu</Button>
+                <Button Grid.Row="4" Grid.Column="4" Name="endBtn" Click="endBtn_Click">Odstranit</Button>
+            </Grid>
+        </Grid>
+    </Viewbox>
+</UserControl>

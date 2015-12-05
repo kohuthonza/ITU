@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("red-flower.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/setting.png")]
 
 

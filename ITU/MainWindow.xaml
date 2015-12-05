@@ -10,10 +10,9 @@
         WindowStyle="None" ResizeMode="NoResize"  
         WindowStartupLocation="CenterScreen" WindowState="Maximized"
         Title="Květinátor" Height="500" Width="850">
- 
-    <DockPanel>
-        <Frame x:Name="_mainFrame" NavigationUIVisibility="Hidden" />
+    <Grid Name="MainGrid">
         
-    </DockPanel>
+    </Grid>
+    
        
 </Window>

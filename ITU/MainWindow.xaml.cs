@@ -22,7 +22,9 @@ namespace ITU
         public MainWindow()
         {
             InitializeComponent();
-            _mainFrame.Navigate(new MainPage());
+            MainGrid.Children.Clear();
+            MainGrid.Children.Add(new MainUserControl());
+            
         }
     }
 }

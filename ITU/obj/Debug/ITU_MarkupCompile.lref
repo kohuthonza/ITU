@@ -1,11 +1,18 @@
 ﻿
 
-FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\AccountsPage.xaml;;
-FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\AddUserPage.xaml;;
-FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\EditUserPage.xaml;;
-FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\MainPage.xaml;;
+FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\Admin\AdminUserControl.xaml;;
+FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\Plants\EditPlantUserControl.xaml;;
+FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\Plants\AddPlantUserControl.xaml;;
+FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\Plants\ShowPlantUserControl.xaml;;
+FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\Users\AccountsUserControl.xaml;;
+FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\NewStart\AddUserUserControl.xaml;;
+FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\Users\EditUserUserControl.xaml;;
+FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\Plants\PlantsUserControl.xaml;;
+FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\MainUserControl.xaml;;
 FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\MainWindow.xaml;;
 FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\PasswordWindow.xaml;;
-FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\ProfilePage.xaml;;
-FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\WelcomePage.xaml;;
+FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\Users\ChangePasswdUserControl.xaml;;
+FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\Users\ProfileUserControl.xaml;;
+FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\NewStart\WelcomeUserControl.xaml;;
+FC:\Users\kohut\documents\visual studio 2015\Projects\ITU\ITU\Admin\UsersListUserControl.xaml;;
 

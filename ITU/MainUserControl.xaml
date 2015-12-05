@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="ITU.MainUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ITU"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="850">
+    <UserControl.Background>
+        <ImageBrush ImageSource="pack://application:,,,/Resources/MainWindow.jpg"></ImageBrush>
+    </UserControl.Background>
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="20"></Setter>
+            <Setter Property="Background" Value="Khaki"></Setter>
+            <Setter Property="BorderBrush" Value="DarkKhaki"></Setter>
+            <Setter Property="BorderThickness" Value="2"></Setter>
+        </Style>
+        <ImageBrush x:Key="ButtonImage" ImageSource="pack://application:,,,/Resources/setting.png"></ImageBrush>
+        <Style TargetType="{x:Type Button}" x:Key="image">
+            <Setter Property="Background" Value="{StaticResource ButtonImage}"/>
+            <Setter Property="BorderThickness" Value="2"></Setter>
+            <Setter Property="BorderBrush" Value="Transparent"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BorderThickness" Value="0"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
+    </UserControl.Resources>
+    
+    <Viewbox>
+        <Grid Name="main_grid" Margin="10" Width="850" Height="500">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            
+            <Button Style="{StaticResource image}" Grid.Row="0" HorizontalAlignment="Right" Name="adminBtn" Click="adminBtn_Click" Width="50">
+                
+
+            </Button>
+
+            <Border Grid.Row="1" BorderBrush="DarkKhaki" BorderThickness="5" Background="Khaki" Margin="120,0">
+                <TextBlock Grid.Row="1" Margin="0,0,0,0" FontSize="120" FontFamily="Times" Foreground="Black"  VerticalAlignment="top" HorizontalAlignment="Center" Text="Květinátor"></TextBlock>
+            </Border>
+            <Grid Grid.Row="3" Margin="10,0,10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="4" Grid.Column="0" Name="startBtn" IsDefault="True" Click="startBtn_Click">Začít</Button>
+                <Button Grid.Row="4" Grid.Column="2" Name="accBtn" Click="accBtn_Click">Květinátoři</Button>
+                <Button Grid.Row="4" Grid.Column="4" Name="endBtn" Click="endBtn_Click">Ukončit</Button>
+            </Grid>
+        </Grid>
+    </Viewbox>
+</UserControl>

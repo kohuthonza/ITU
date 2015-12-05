@@ -22,6 +22,22 @@ namespace ITU
             Users.Initialize();
             Users.deserialize();
 
+            Plants.Initialize();
+            Plants.deserialize();
+
+            try
+            {
+                Users.Admin = Users.users.First(var => (var.Login == "admin"));
+                Users.users.Remove(Users.Admin);
+            }
+            catch (InvalidOperationException)
+            {
+                User tmp = new User();
+                tmp.Login = "admin";
+                tmp.Passwd = "admin";
+                Users.Admin = tmp;
+            }
+
             MainWindow wnd = new MainWindow();
             wnd.Show();
         }
@@ -29,6 +45,7 @@ namespace ITU
         private void Application_Exit(object sender, ExitEventArgs e)
         {
             Users.serialize();
+            Plants.serialize();
         }
     }
 }
